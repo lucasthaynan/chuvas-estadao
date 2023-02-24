@@ -112,7 +112,7 @@ demo.resize = function() {
 	if (demo.width < 710) {
 		document.querySelector("p.legenda").innerHTML = "Clique na tela abaixo para mudar a orientação do vento"
 	}
-	console.log(demo.width)
+	console.log(viewport_width)
 }
 
 demo.step = function(time, lag) {

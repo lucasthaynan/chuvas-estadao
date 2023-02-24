@@ -53,14 +53,8 @@ canvas {
 @media (max-width: 440px) {
     p.legenda {
         /* display: none; */
-        width: 80vw;
-        margin: 0 auto;
+        width: 90vw;
         /* background-color: rgb(63, 147, 147); */
-    }
-
-    p.destaque {
-        width: 80vw;
-        margin: 0 auto;
     }
 }
 

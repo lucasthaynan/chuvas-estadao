@@ -57,11 +57,6 @@ canvas {
         margin: 0 auto;
         /* background-color: rgb(63, 147, 147); */
     }
-
-    p.destaque {
-        width: 80vw;
-        margin: 0 auto;
-    }
 }
 
 #instructions {

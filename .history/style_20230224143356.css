@@ -33,34 +33,17 @@ canvas {
     margin-top: 120px;
 
     /* background-color: rgb(63, 147, 147); */
-    /* border: 10px solid #ffffff; */
+    border: 3px solid #ffffff;
 
     
-    box-sizing: border-box;
+
     
 }
 
-@media (max-width: 709px) {
+@media (max-width: 720px) {
     canvas {
-        /* display: none; */
-        width: 100vw;
-        /* background-color: rgb(63, 147, 147); */
-    }
-}
-
-
-
-@media (max-width: 440px) {
-    p.legenda {
-        /* display: none; */
-        width: 80vw;
-        margin: 0 auto;
-        /* background-color: rgb(63, 147, 147); */
-    }
-
-    p.destaque {
-        width: 80vw;
-        margin: 0 auto;
+        display: none;
+        background-color: rgb(63, 147, 147);
     }
 }
 

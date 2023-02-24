@@ -107,12 +107,6 @@ demo.resize = function() {
 	demo.height = window.innerHeight;
 	demo.canvas.width = demo.width * demo.dpr;
 	demo.canvas.height = demo.height * demo.dpr;
-
-	// let viewport_width = window.innerWidth;
-	if (demo.width < 710) {
-		document.querySelector("p.legenda").innerHTML = "Clique na tela abaixo para mudar a orientação do vento"
-	}
-	console.log(demo.width)
 }
 
 demo.step = function(time, lag) {
@@ -463,3 +457,5 @@ function clickNormal(){
 	}
 
 
+let viewport_width = window.innerWidth;
+console.log(viewport_width)

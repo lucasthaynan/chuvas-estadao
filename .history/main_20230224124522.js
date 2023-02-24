@@ -310,13 +310,7 @@ demo.updateCursor = function(x, y) {
 	var y_inverse = (1 - y);
 	
 	// demo.drop_delay = y_inverse*y_inverse*y_inverse * 100 + 2;
-
-	if (btnAtual == "tragedia") {
-		demo.wind = (x - 0.5) * 50;
-	} else {
-		demo.wind = (x - 0.5) * 25;
-	}
-	
+	demo.wind = (x - 0.5) * 50;
 }
 
 document.addEventListener('mousemove', demo.mouseHandler);
@@ -400,11 +394,7 @@ var Ticker = (function(){
 
 // }
 
-let btnAtual = "normal"
-
 function clickTragedia(){
-
-		btnAtual = "tragedia"
 
 		document.querySelector("button.btn-normal").classList.remove("active")
 		document.querySelector("button.btn-tragedia").classList.add("active")
@@ -425,12 +415,10 @@ function clickTragedia(){
 		demo.drop_delay = 2.5
 		demo.wind = 15
 		Drop.max_speed = 10
-		console.log(btnAtual)
+		console.log("tragedia")
 	}
 
 function clickNormal(){
-
-		btnAtual = "normal"
 
 		// document.querySelector("button .btn-tragedia").style.background = "#797979"
 
@@ -453,7 +441,7 @@ function clickNormal(){
 		demo.drop_delay = 195
 		demo.wind = 5
 		Drop.max_speed = 6
-		console.log(btnAtual)
+		console.log("normal")
 	}
 
 

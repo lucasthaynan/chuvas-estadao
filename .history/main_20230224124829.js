@@ -314,7 +314,7 @@ demo.updateCursor = function(x, y) {
 	if (btnAtual == "tragedia") {
 		demo.wind = (x - 0.5) * 50;
 	} else {
-		demo.wind = (x - 0.5) * 25;
+		demo.wind = (x - 0.5) * 10;
 	}
 	
 }

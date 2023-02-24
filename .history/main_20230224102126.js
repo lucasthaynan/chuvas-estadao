@@ -8,14 +8,9 @@
 // - all particles make use of object pooling to further boost performance
 
 // initialize
-
-
 document.addEventListener("DOMContentLoaded", function() {
-	
 	demo.init();
 	window.addEventListener('resize', demo.resize);
-
-
 });
 
 // demo namespace
@@ -45,10 +40,10 @@ var demo = {
 	// time since last drop
 	drop_time: 0,
 	// ideal time between drops (changed with mouse/finger)
-    drop_delay: 195,
+    drop_delay: 2.5,
 	// drop_delay: 156,
 	// wind applied to rain (changed with mouse/finger)
-    wind: 5,
+    wind: 15,
 	// wind: 5,
 	// color of rain (set in init)
 	rain_color: null,
@@ -63,9 +58,7 @@ var demo = {
 
 // demo initialization (should only run once)
 demo.init = function() {
-	
 	if (!demo.started) {
-		
 		demo.started = true;
 		demo.canvas = document.getElementById('canvas');
 		demo.ctx = demo.canvas.getContext('2d');
@@ -278,7 +271,7 @@ function Drop() {
 }
 
 // DISPERCAO DOS PINGOS NO CHAO
-Drop.max_speed = 6;
+Drop.max_speed = 10;
 
 Drop.prototype.init = function(x) {
 	this.x = x;
@@ -309,17 +302,11 @@ demo.updateCursor = function(x, y) {
 	y /= demo.height;
 	var y_inverse = (1 - y);
 	
-	// demo.drop_delay = y_inverse*y_inverse*y_inverse * 100 + 2;
-
-	if (btnAtual == "tragedia") {
-		demo.wind = (x - 0.5) * 50;
-	} else {
-		demo.wind = (x - 0.5) * 25;
-	}
-	
+	demo.drop_delay = y_inverse*y_inverse*y_inverse * 100 + 2;
+	demo.wind = (x - 0.5) * 50;
 }
 
-document.addEventListener('mousemove', demo.mouseHandler);
+// document.addEventListener('mousemove', demo.mouseHandler);
 // document.addEventListener('touchstart', demo.touchHandler);
 // document.addEventListener('touchmove', demo.touchHandler);
 
@@ -378,98 +365,3 @@ var Ticker = (function(){
 
 	return PUBLIC_API;
 }());
-
-// ATIVANDO BOTOES PARA MUDAR VOLUME DA CHUVA
-
-// window.onload=function() {
-
-// 	let btnNormal = document.querySelector("div.btn-normal")
-// 	let btnTragedia = document.querySelector("div.btn-tragedia")
-
-// 	btnNormal.addEventListener("click", e => {
-// 		demo.drop_delay = 156
-// 		demo.wind = 5
-// 		console.log("normal")
-// 	})
-
-// 	btnTragedia.addEventListener("click", e => {
-// 		demo.drop_delay = 2.5
-// 		demo.wind = 15
-// 		console.log("tragedia")
-// 	})
-
-// }
-
-let btnAtual = "normal"
-
-function clickTragedia(){
-
-		btnAtual = "tragedia"
-
-		document.querySelector("button.btn-normal").classList.remove("active")
-		document.querySelector("button.btn-tragedia").classList.add("active")
-
-		document.querySelector("p.destaque").classList.add("hidden")	
-		document.querySelector("p.volume").classList.add("hidden")
-
-		setTimeout(() => {
-			document.querySelector("p.destaque").innerHTML = "Volume de chuva no dia da tragédia"
-			document.querySelector("p.volume").innerHTML = "26,5 litros/hora por m²"
-
-			document.querySelector("p.destaque").classList.remove("hidden");
-			document.querySelector("p.volume").classList.remove("hidden");
-		  }, 500)
-
-	
-
-		demo.drop_delay = 2.5
-		demo.wind = 15
-		Drop.max_speed = 10
-		console.log(btnAtual)
-	}
-
-function clickNormal(){
-
-		btnAtual = "normal"
-
-		// document.querySelector("button .btn-tragedia").style.background = "#797979"
-
-		document.querySelector("button.btn-normal").classList.add("active")
-		document.querySelector("button.btn-tragedia").classList.remove("active")
-
-		document.querySelector("p.destaque").classList.add("hidden")	
-		document.querySelector("p.volume").classList.add("hidden")
-		
-		setTimeout(() => {
-			document.querySelector("p.destaque").innerHTML = "Volume de chuva em um dia normal"
-			document.querySelector("p.volume").innerHTML = "333ml/hora por m²"
-
-			document.querySelector("p.destaque").classList.remove("hidden");
-			document.querySelector("p.volume").classList.remove("hidden");
-		  }, 500)
-
-		
-
-		demo.drop_delay = 195
-		demo.wind = 5
-		Drop.max_speed = 6
-		console.log(btnAtual)
-	}
-
-
-// let btnNormal = document.querySelector("div.btn-normal")
-// 	let btnTragedia = document.querySelector("div.btn-tragedia")
-
-// 	btnNormal.addEventListener("click", e => {
-// 		console.log("normal")
-// 		demo.drop_delay = 156
-// 		demo.wind = 5
-// 		console.log("normal")
-// 	})
-
-// 	btnTragedia.addEventListener("click", e => {
-// 		console.log("tragedia")
-// 		demo.drop_delay = 2.5
-// 		demo.wind = 15
-// 		console.log("tragedia")
-// 	})

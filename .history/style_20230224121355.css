@@ -30,7 +30,7 @@ canvas {
     position: absolute;
     transform: translateX(-50%);
 
-    margin-top: 120px;
+    margin-top: 100px;
     
 }
 
@@ -78,7 +78,6 @@ p {
     font-weight: 800;
     color: #989898;
     font-size: 20px;
-    text-align: center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -91,7 +90,7 @@ p.volume {
     transition: ;
 } */
 
-button.btn-normal.active,
+button.btn-nornal.active,
 button.btn-tragedia.active {
     background-color: #ffffff;
 }
@@ -115,12 +114,12 @@ div.btns {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     padding-top: 30px;
 }
 
 div.btns > button {
-    background-color: #747474;
+    background-color: #989898;
     padding: 8px 14px;
     border-radius: 999px;
     cursor: pointer;
@@ -140,11 +139,3 @@ h1 {
     position: absolute;
     transform: translateX(-50%);
 }
-
-p.legenda {
-    text-align: center;
-    font-size: 12px;
-    font-weight: 200;
-    color: #585858;
-}
-

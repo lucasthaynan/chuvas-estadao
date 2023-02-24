@@ -312,9 +312,9 @@ demo.updateCursor = function(x, y) {
 	// demo.drop_delay = y_inverse*y_inverse*y_inverse * 100 + 2;
 
 	if (btnAtual == "tragedia") {
-		demo.wind = (x - 0.5) * 20;
+		demo.wind = (x - 0.5) * 50;
 	} else {
-		demo.wind = (x - 0.5) * 10;
+		demo.wind = (x - 0.5) * 25;
 	}
 	
 }
@@ -423,7 +423,7 @@ function clickTragedia(){
 	
 
 		demo.drop_delay = 2.5
-		demo.wind = 5
+		demo.wind = 6
 		Drop.max_speed = 10
 		console.log(btnAtual)
 	}
@@ -451,7 +451,7 @@ function clickNormal(){
 		
 
 		demo.drop_delay = 195
-		demo.wind = 4
+		demo.wind = 5
 		Drop.max_speed = 6
 		console.log(btnAtual)
 	}

@@ -312,9 +312,9 @@ demo.updateCursor = function(x, y) {
 	// demo.drop_delay = y_inverse*y_inverse*y_inverse * 100 + 2;
 
 	if (btnAtual == "tragedia") {
-		demo.wind = (x - 0.5) * 20;
+		demo.wind = (x - 0.5) * 50;
 	} else {
-		demo.wind = (x - 0.5) * 10;
+		demo.wind = (x - 0.5) * 25;
 	}
 	
 }

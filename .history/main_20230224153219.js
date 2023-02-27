@@ -429,7 +429,7 @@ function clickTragedia(){
 	
 
 		demo.drop_delay = 2.5
-		demo.wind = 0
+		demo.wind = 5
 		Drop.max_speed = 10
 		console.log(btnAtual)
 	}
@@ -457,7 +457,7 @@ function clickNormal(){
 		
 
 		demo.drop_delay = 195
-		demo.wind = 0
+		demo.wind = 4
 		Drop.max_speed = 6
 		console.log(btnAtual)
 	}
